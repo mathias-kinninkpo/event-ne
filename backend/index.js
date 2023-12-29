@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(Serveur démarré sur le port ${port});
+  console.log("Serveur démarré sur le port ${port}");
 });
 
 module.exports = app;
