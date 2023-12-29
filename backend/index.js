@@ -7,6 +7,8 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
+const port = 3000;
+
 // Utilisez le module pour initialiser la base de données
 databaseInit.initializeDatabase();
 
@@ -22,6 +24,10 @@ app.use("/invites", updateInviteRoute);
 
 app.get("/", (req, res) => {
   res.send("Mon Backend !");
+});
+
+app.listen(port, () => {
+  console.log(Serveur démarré sur le port ${port});
 });
 
 module.exports = app;
